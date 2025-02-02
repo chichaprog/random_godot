@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://daajkm2hnfn3n"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_tmun2"]
+[ext_resource type="Texture2D" uid="uid://b7m6i0fiuiykw" path="res://icon.svg" id="2_lraim"]
+[ext_resource type="PackedScene" uid="uid://davbcpxkkgtov" path="res://character_body_2d.tscn" id="3_off1s"]
+[ext_resource type="PackedScene" uid="uid://dpijyghpgbtsd" path="res://static_body_2d.tscn" id="4_tyr5q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgxja"]
+bg_color = Color(0.624047, 0.628407, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jmr55"]
+bg_color = Color(0.210141, 0.692817, 0.551813, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.769029, 0.00098052, 0.850397, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tmun2")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -1973.0
+offset_top = 111.0
+offset_right = -1597.0
+offset_bottom = 429.0
+theme_override_colors/font_hover_color = Color(0.800445, 5.77569e-07, 0.469569, 1)
+theme_override_colors/font_pressed_color = Color(2.21401e-06, 0.549264, 0.541974, 1)
+theme_override_colors/font_focus_color = Color(0.325989, 0.000348659, 0.974994, 1)
+theme_override_colors/font_color = Color(0.78964, 0.432476, 3.85046e-07, 1)
+theme_override_constants/outline_size = 50
+theme_override_constants/h_separation = 10
+theme_override_constants/icon_max_width = 10
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_font_sizes/font_size = 80
+text = "click here"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 2163.0
+offset_top = 279.0
+offset_right = 2546.0
+offset_bottom = 408.0
+theme_override_colors/font_hover_pressed_color = Color(9.04858e-06, 0.858149, 0.664493, 1)
+theme_override_colors/font_hover_color = Color(0.982625, 2.59906e-06, 0.512941, 1)
+theme_override_colors/font_pressed_color = Color(0.696193, 0.529903, 7.70092e-07, 1)
+theme_override_colors/font_focus_color = Color(0.441808, 0.572604, 1, 1)
+theme_override_colors/font_color = Color(0.591332, 0.323676, 1, 1)
+theme_override_constants/outline_size = 50
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cgxja")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jmr55")
+text = "check Button"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+offset_left = 2392.0
+offset_top = -272.0
+offset_right = 2653.0
+offset_bottom = -157.0
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_constants/icon_max_width = 10
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_font_sizes/font_size = 30
+theme_override_constants/check_v_offset = 0
+theme_override_icons/checked = ExtResource("2_lraim")
+text = "click check box"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2214.0
+offset_top = 531.0
+offset_right = -1941.0
+offset_bottom = 775.0
+theme_override_colors/font_color = Color(0.811335, 3.64831e-05, 0.601243, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.79987, 0.351753, 1)
+theme_override_colors/font_outline_color = Color(0.685989, 0.441977, 0, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "hello world"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 2204.0
+offset_top = -678.0
+offset_right = 2716.0
+offset_bottom = -202.0
+theme_override_colors/word_highlighted_color = Color(0.489472, 0.742333, 1, 1)
+theme_override_colors/current_line_color = Color(1, 0.125705, 0.574347, 1)
+theme_override_colors/background_color = Color(0.385779, 0.367966, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/line_spacing = 10
+theme_override_constants/caret_width = 10
+theme_override_font_sizes/font_size = 80
+text = "I'm text"
+placeholder_text = "hello
+"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_off1s")]
+position = Vector2(-275, 188)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("4_tyr5q")]
+position = Vector2(-116, -4)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("4_tyr5q")]
+position = Vector2(-400, -2)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("4_tyr5q")]
+position = Vector2(-686, -2)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("4_tyr5q")]
+position = Vector2(168, -6)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_edit_text_changed"]
